@@ -59,6 +59,7 @@ contract CryptoKids {
 
     function availableToWithdraw(address walletAddress) public returns(bool){
         uint i = getIndex(walletAddress);
+        require(block.timestamp > kids[i].releaseTime, "You cannot withdraw yet");
         if(block.timestamp >= kids[i].releaseTime){
             kids[i].canWithdraw = true;
             return true;
@@ -70,8 +71,11 @@ contract CryptoKids {
 
     function withdraw(address payable walletAddress) payable public{
         uint i = getIndex(walletAddress);
+        require(msg.sender == kids[i].walletAddress, "You must be the kid to withdraw");
+        require(kids[i].canWithdraw == true, "You are not able to withdraw at this time");
         kids[i].walletAddress.transfer(kids[i].amount);
     }
 
 }
-// Address - 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2,"Jarvis","S",1651588667,0,false
+// Address - 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2,"John","Doe",1651726483,0,false
+// Address - 0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db,"Jane","Doe",1651726483,0,false

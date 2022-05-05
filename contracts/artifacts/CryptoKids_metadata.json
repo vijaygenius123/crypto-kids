@@ -179,11 +179,11 @@
 	},
 	"sources": {
 		"contracts/CryptoKids.sol": {
-			"keccak256": "0x06871ff608cbb148a5152c46128548018de67388241fb4c8937a09885087f11b",
+			"keccak256": "0x6058419756423b206b307bc5366584417d528ad4af6befacc287c7da3e6f7fe0",
 			"license": "Unlicnsed",
 			"urls": [
-				"bzz-raw://1bc47eeb0cdedf6c986375f593ae0fe234713a650baf78481a5bdc10c6da12a0",
-				"dweb:/ipfs/QmPxiCf9Kvc3xcsejFGHkVTRXSw17H1XVZrzGWMJqJhcLn"
+				"bzz-raw://61c02f19583889a01d48e8b62d895d7657e8912dbf2c1c297b267860636ddca0",
+				"dweb:/ipfs/QmVw1h7itFWEHVw4wcTa3kE4Uq45dHehpiMUDMaP2MZu44"
 			]
 		}
 	},
